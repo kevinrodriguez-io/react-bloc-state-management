@@ -18,5 +18,3 @@ export class Bloc {
   }
 
 }
-
-export const BlocContext = createContext();
