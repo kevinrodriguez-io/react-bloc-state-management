@@ -1,5 +1,7 @@
 export class TodosState {
   constructor(loading, todos) {
+    // Prevent class from being instantiated (Abstract)
+    // TS has abstract keyword
     if (new.target === TodosState) {
       throw new TypeError("Cannot construct Abstract instances directly");
     }

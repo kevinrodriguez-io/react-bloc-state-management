@@ -4,9 +4,10 @@ import { Initial, Loading, Loaded } from "./state";
 
 export class Bloc {
   constructor() {
+    // A BehaviorSubject always has a notion of it's current value
     this.observable = new BehaviorSubject(new Initial());
   }
-
+  
   async dispatch(event) {
     if (event instanceof Load) {
       this.observable.next(new Loading());
